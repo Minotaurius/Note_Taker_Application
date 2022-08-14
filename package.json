@@ -1,0 +1,23 @@
+{
+  "name": "note_taker_application",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Minotaurius/Note_Taker_Application.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Minotaurius/Note_Taker_Application/issues"
+  },
+  "homepage": "https://github.com/Minotaurius/Note_Taker_Application#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
