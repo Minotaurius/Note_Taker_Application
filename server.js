@@ -6,7 +6,6 @@ const path = require('path');
 const db = require('./db/db.json')
 
 const api_routes = '';
-const note_routes = ''
 
 // sharing static/public files
 
@@ -19,7 +18,6 @@ app.use(express.json());
 // load our routes
 
 app.use('/', api_routes)
-app.use('/', note_routes)
 
 app.listen(PORT, () => {
     console.log(`Listening on Port ${PORT}`)
