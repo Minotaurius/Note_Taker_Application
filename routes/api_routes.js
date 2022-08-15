@@ -4,7 +4,7 @@ const fs = require('fs')
 
 // routes to read and receive new notes
 
-module.exports = function() {
+module.exports = function(app) {
     var notes;
 
     app.get("api/notes", (req, res) => {

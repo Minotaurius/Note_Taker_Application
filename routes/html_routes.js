@@ -1,6 +1,5 @@
 // required packages
 
-const { appendFile } = require('fs');
 const path = require('path');
 
 // routes to return index and notes html files, will pull into server.js
