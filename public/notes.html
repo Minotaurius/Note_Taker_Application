@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Note Taker Application</title>
+    <link rel="stylesheet" href="https://kit.fontawesome.com/174d711716.js" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 <body>
@@ -15,19 +16,20 @@
     </header>
 
     <main>
-        <section>
-            <ul>
+        <section class="list-container">
+            <ul class="list-group-item">
                 notes entered here
             </ul>
         </section>
 
         <div>
-            <input name="note-title"type="text" placeholder="Note Title">
-            <input name="note-textarea"type="text" placeholder="Note Text">
+            <input class="note-title"type="text" placeholder="Note Title">
+            <input class="note-textarea"type="text" placeholder="Note Text">
+            <button class="">submit</button>
         </div>
     </main>
     
-    <script src="https://kit.fontawesome.com/174d711716.js" crossorigin="anonymous"></script>
+
     <script src="./assets/js/index.js"></script>
 </body>
 </html>
