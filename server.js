@@ -1,11 +1,13 @@
 // pulling in our packages
-const { response } = require('express');
 const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3333;
 const path = require('path');
 
-const api_routes = require('./routes/api_routes')
+const routes = require('./routes/api_routes')
+
+// const html_router = require('./routes/api_routes')
+// const note_router = require('./routes/api_routes')
 
 // sharing static/public files
 
@@ -22,9 +24,12 @@ app.use(express.json());
 //     res.sendFile(__dirname, '/public/index.html')
 // })
 
-app.get('/notes', (req, res) => {
-    res.sendFile(__dirname, '/public/notes.html')
-})
+app.use('/', routes.html_router)
+app.use('/api', routes.note_router)
+
+// app.get('/notes', (req, res) => {
+//     res.sendFile(__dirname, '/public/notes.html')
+// })
 
 // app.use('/')
 
