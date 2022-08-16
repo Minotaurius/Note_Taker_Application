@@ -18,15 +18,15 @@ app.use(express.json());
 // load our routes
 // require("./routes/html_routes")(app)
 // require("./routes/api_routes")
-app.get('/', (req, res) => {
-    res.sendFile(__dirname, '/public/index.html')
-})
+// app.get('/', (req, res) => {
+//     res.sendFile(__dirname, '/public/index.html')
+// })
 
 app.get('/notes', (req, res) => {
     res.sendFile(__dirname, '/public/notes.html')
 })
 
-app.use('/api', api_routes)
+// app.use('/')
 
 
 app.listen(PORT, () => {
