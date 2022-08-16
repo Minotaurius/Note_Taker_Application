@@ -7,8 +7,8 @@ const fs = require('fs')
 module.exports = function(app) {
     var notes;
 
-    app.get("api/notes", (req, res) => {
-        fs.readFile("../db/db.json", () => {
+    app.get("/api/notes", (req, res) => {
+        fs.readFile("./db/db.json", (err, data) => {
             if (err) throw err;
             res.json(JSON.parse(data))
         })
@@ -16,11 +16,11 @@ module.exports = function(app) {
 
     app.post("/api/notes", (req, res) => {
         var addNote = req.body
-        fs.readFile("../db/db.json", () => {
+        fs.readFile("./db/db.json", (err, data) => {
             var notes = JSON.parse()
-            notes.push(addNote)
+            notes.push(addNote);
         })
-        fs.writeFile("../db/db.jsson", JSON.stringify(notes), () => {
+        fs.writeFile("./db/db.jsson", JSON.stringify(notes), () => {
             if(err) throw err
         })
         res.json(addNote)
