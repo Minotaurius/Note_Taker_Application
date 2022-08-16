@@ -19,11 +19,11 @@ app.use(express.json());
 // require("./routes/html_routes")(app)
 // require("./routes/api_routes")
 app.get('/', (req, res) => {
-    response.sendFile(__dirname + '/public/index.html')
+    res.sendFile(__dirname, '/public/index.html')
 })
 
 app.get('/notes', (req, res) => {
-    response.sendFile(__dirname + '/public/notes.html')
+    res.sendFile(__dirname, '/public/notes.html')
 })
 
 app.use('/api', api_routes)

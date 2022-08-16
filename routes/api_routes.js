@@ -1,8 +1,8 @@
 // rquired packages
+const note_router = require('express').Router()
 const { response } = require('express')
 const fs = require('fs')
 const path = require ('path')
-const note_router = require('express').Router()
 
 function getNotes() {
     return fs.promises.readFile('./db/db.json', 'utf8')
@@ -11,23 +11,24 @@ function getNotes() {
 
 note_router.get('/notes', (req, res) => {
     getNotes()
-    if (err) throw err
-    res.json(JSON.parse(data))
+    .then(data => res.json(data))
+    .catch(err => console.log(err))
 })
 
 note_router.post('/notes', (req, res) => {
     getNotes()
     .then((notesList) => {
-    var addNote = request.body
+    var addNote = req.body
     notesList.push(addNote)
 fs.promises.writeFile('./db/db.json', JSON.stringify(notesList))
     .then(() => {
-        if (err) throw err;
         response.json(notesList)
+        .catch(err => console.log(err))
     })
     })
 })
 
+module.exports = note_router
 
 
 
