@@ -5,31 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Note Taker Application</title>
-    <link rel="stylesheet" href="https://kit.fontawesome.com/174d711716.js" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/skeleton.css">
     <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 <body>
     <header>
         Note Taker
-        <i class="fa-solid fa-plus"></i>
-        <i class="fa-solid fa-floppy-disk"></i>
+        <i class="fa-solid fa-plus new note"></i>
+        <i class="fa-solid fa-floppy-disk save note"></i>
     </header>
 
-    <main>
-        <section class="list-container">
+    <main clas="container">
+        <section class="list-container three columns">
             <ul class="list-group-item">
                 notes entered here
             </ul>
         </section>
 
-        <div>
+        <div class="nine columns">
             <input class="note-title"type="text" placeholder="Note Title">
             <input class="note-textarea"type="text" placeholder="Note Text">
-            <button class="">submit</button>
         </div>
     </main>
     
-
+    <script src="https://kit.fontawesome.com/174d711716.js" crossorigin="anonymous"></script>
     <script src="./assets/js/index.js"></script>
 </body>
 </html>
